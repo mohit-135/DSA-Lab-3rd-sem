@@ -111,44 +111,44 @@ void deleteEnd()
     temp->next = NULL;
 }
 
-// Delete from middle
-void deleteMiddle(int position)
-{
-    if (head == NULL)
-    {
-        printf("List is empty\n");
-        return;
-    }
+// // Delete from middle
+// void deleteMiddle(int position)
+// {
+//     if (head == NULL)
+//     {
+//         printf("List is empty\n");
+//         return;
+//     }
 
-    if (position <= 1)
-    {
-        struct Node *temp = head;
+//     if (position <= 1)
+//     {
+//         struct Node *temp = head;
 
-        head = head->next;
+//         head = head->next;
 
-        free(temp);
-        return;
-    }
+//         free(temp);
+//         return;
+//     }
 
-    struct Node *temp = head;
+//     struct Node *temp = head;
 
-    for (int i = 1; i < position - 1 && temp->next != NULL; i++)
-    {
-        temp = temp->next;
-    }
+//     for (int i = 1; i < position - 1 && temp->next != NULL; i++)
+//     {
+//         temp = temp->next;
+//     }
 
-    if (temp->next == NULL)
-    {
-        printf("Invalid position\n");
-        return;
-    }
+//     if (temp->next == NULL)
+//     {
+//         printf("Invalid position\n");
+//         return;
+//     }
 
-    struct Node *deleteNode = temp->next;
+//     struct Node *deleteNode = temp->next;
 
-    temp->next = deleteNode->next;
+//     temp->next = deleteNode->next;
 
-    free(deleteNode);
-}
+//     free(deleteNode);
+// }
 
 // Display linked list
 void display()
@@ -201,10 +201,10 @@ int main()
     display();
 
     // Delete node at position 3
-    deleteMiddle(3);
+    // deleteMiddle(3);
 
-    printf("After deleting node at position 3: ");
-    display();
+    // printf("After deleting node at position 3: ");
+    // display();
 
     return 0;
 }
