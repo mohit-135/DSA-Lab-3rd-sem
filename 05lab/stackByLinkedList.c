@@ -77,47 +77,54 @@ void display()
 
 int main()
 {
-    int choice, value;
+    // int choice, value;
 
-    while (1)
-    {
-        printf("\n--- STACK USING LINKED LIST ---\n");
-        printf("1. Push\n");
-        printf("2. Pop\n");
-        printf("3. Peek\n");
-        printf("4. Display\n");
-        printf("5. Exit\n");
+    // while (1)
+    // {
+    //     printf("\n--- STACK USING LINKED LIST ---\n");
+    //     printf("1. Push\n");
+    //     printf("2. Pop\n");
+    //     printf("3. Peek\n");
+    //     printf("4. Display\n");
+    //     printf("5. Exit\n");
 
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+    //     printf("Enter your choice: ");
+    //     scanf("%d", &choice);
 
-        switch (choice)
-        {
-        case 1:
-            printf("Enter value: ");
-            scanf("%d", &value);
-            push(value);
-            break;
+    //     switch (choice)
+    //     {
+    //     case 1:
+    //         printf("Enter value: ");
+    //         scanf("%d", &value);
+    //         push(value);
+    //         break;
 
-        case 2:
-            pop();
-            break;
+    //     case 2:
+    //         pop();
+    //         break;
 
-        case 3:
-            peek();
-            break;
+    //     case 3:
+    //         peek();
+    //         break;
 
-        case 4:
-            display();
-            break;
+    //     case 4:
+    //         display();
+    //         break;
 
-        case 5:
-            exit(0);
+    //     case 5:
+    //         exit(0);
 
-        default:
-            printf("Invalid choice\n");
-        }
-    }
+    //     default:
+    //         printf("Invalid choice\n");
+    //     }
+    // }
+
+    push(10);
+    push(20);
+    push(30);
+    display();
+    pop();
+    display();
 
     return 0;
 }
