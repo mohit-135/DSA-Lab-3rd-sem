@@ -20,6 +20,7 @@ void insertStart(int value) {
         head->prev = newNode;
 
     head = newNode;
+    printf("%d Inserted at start \n",value);
 }
 
 void insertEnd(int value) {
@@ -40,6 +41,7 @@ void insertEnd(int value) {
 
     temp->next = newNode;
     newNode->prev = temp;
+    printf("%d Inserted at end \n",value);
 }
 
 
@@ -72,6 +74,7 @@ void insertMiddle(int value, int position) {
         temp->next->prev = newNode;
 
     temp->next = newNode;
+    printf("%d Inserted at position %d \n",value , position);
 }
 
 
@@ -88,7 +91,9 @@ void deleteStart() {
     if (head != NULL)
         head->prev = NULL;
 
+    printf("%d Deleted from start \n",temp ->data);
     free(temp);
+
 }
 
 // Delete from End
@@ -238,20 +243,20 @@ int main() {
 
     insertStart(10);
     insertStart(20);
-    insertStart(30);
-    insertStart(40);
+    // insertStart(30);
+    // insertStart(40);
 
     insertEnd(50);
-    insertEnd(50);
+    insertEnd(60);
 
-    insertMiddle(60,4);
+    insertMiddle(60,3);
     display();
 
     deleteStart();
-    deleteStart();
+    // deleteStart();
     deleteEnd();
-    deleteEnd();
-    deleteMiddle(2);
+    // deleteEnd();
+    // deleteMiddle(2);
 
     display();
 
