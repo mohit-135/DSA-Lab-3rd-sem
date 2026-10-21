@@ -25,7 +25,6 @@ void enqueue(int value) {
     // First node
     if (front == NULL) {
         front = rear = newNode;
-
         newNode->next = newNode;
         newNode->prev = newNode;
     }
