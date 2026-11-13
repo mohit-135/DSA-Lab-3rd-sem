@@ -9,7 +9,7 @@ struct Node {
     struct Node *right;
 };
 
-// Create a new node
+// Create a new node AVL Tree, B Tree, B+ Tree
 struct Node* createNode(int value) {
     struct Node* newNode =
         (struct Node*)malloc(sizeof(struct Node));
